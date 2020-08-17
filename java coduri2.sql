@@ -1,8 +1,4 @@
-<center><img src="L2UI_CH3.onscrmsg_pattern01_1" width=300 height=32 align=left>
-<img src=l2ui.bbs_lineage2 height=16 width=80></center>
-+79024766396  - qiwi numarul invatatorului pe java
-<center><img src="l2font-e.mini_logo-e" width=180 height=80>
-<img src="L2UI_CH3.onscrmsg_pattern01_1" width=300 height=32 align=left></center>
+
 
 -> leamda
 
