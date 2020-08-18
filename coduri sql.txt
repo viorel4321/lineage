@@ -1,0 +1,109 @@
+Для выдачи какого либо предмета игроку оффлайн вам необходимо выполнить SQL запрос:
+
+INSERT INTO `items_delayed` (`owner_id`, `item_id`, `count`) VALUES (char_obj_id, item_id, item_count);
+
+INSERT INTO `items_delayed` (`owner_id`, `item_id`, `count`) VALUES (12345678, 4037, 5);
+Мы выдаем игроку 12345678 тысячу адены.
+Этот вариант работает как если онлайн игрок или игрок оффлайн.
+
+DELETE FROM droplist WHERE mobId=25325
+
+UPDATE droplist
+SET chance=500000
+WHERE 
+itemid=6660 AND sweep=1 OR itemid=6662 AND sweep=1 OR itemid=6661 AND sweep=1 OR itemid=6657 AND sweep=1 OR itemid=6658 AND sweep=1 OR itemid=6656 AND sweep=1 OR itemid=8191 AND sweep=1
+
+
+UPDATE char_templates
+SET x=47346,y=186695,z=-3486
+
+
+UPDATE droplist
+SET max=3
+WHERE 
+itemid=5574 AND mobId=22124 OR itemid=5574 AND mobId=22126 OR itemid=5574 AND mobId=22123 OR itemid=5574 AND mobId=22122 OR itemid=5574 AND mobId=22125 OR itemid=5574 AND mobId=22127 OR itemid=5574 AND mobId=22128 OR itemid=5574 AND mobId=22129 OR itemid=5574 AND mobId=22132 OR itemid=5574 AND mobId=22134 OR itemid=5574 AND mobId=22133 OR itemid=5574 AND mobId=22131 OR itemid=5574 AND mobId=22135 OR itemid=5574 AND mobId=22130
+
+
+UPDATE droplist
+SET chance=10000
+WHERE 
+itemId=6673 AND chance=100000 OR itemId=5574 AND chance=100000 OR itemId=5308 AND chance=100000 OR itemId=5289 AND chance=100000 OR itemId=5291 AND chance=100000 OR itemId=5290 AND chance=100000 OR itemId=6684 AND chance=100000 OR itemId=6687 AND chance=100000 OR itemId=6686 AND chance=100000 OR itemId=6685 AND chance=100000 OR itemId=6680 AND chance=100000 OR itemId=6683 AND chance=100000 OR itemId=6682 AND chance=100000 OR itemId=6681 AND chance=100000 OR itemId=6674 AND chance=100000 OR itemId=6675 AND chance=100000 OR itemId=6679 AND chance=100000 OR itemId=6676 AND chance=100000 OR itemId=5296 AND chance=100000 OR itemId=5294 AND chance=100000 OR itemId=5295 AND chance=100000 OR itemId=5293 AND chance=100000 OR itemId=6677 AND chance=100000 OR itemId=6678 AND chance=100000 OR itemId=6579 AND chance=100000 OR itemId=7575 AND chance=100000 OR itemId=6372 AND chance=100000 OR itemId=6367 AND chance=100000
+
+
+
+UPDATE npc
+SET level=80
+WHERE id=20833 OR id=20836 OR id=20832 OR id=21607 OR id=21604 OR id=20835 OR id=21613 OR id=21610 OR id=20839 OR id=21616 OR id=20840 OR id=20841 OR id=21619
+
+DELETE FROM droplist WHERE itemId=5780 OR  itemId=547 OR  itemId=5768 OR  itemId=2382;
+
+Stergem sagetile din baza
+DELETE FROM droplist WHERE itemId=1344
+
+
+DELETE FROM droplist WHERE itemId=5780 OR
+
+
+UPDATE raidboss_status
+SET respawn_delay=0
+
+
+
+RB
+UPDATE npc
+SET level=85,hp=1500000,patk=20000,pdef=6000,mdef=1500,exp=10000000
+WHERE id=25372
+
+
+Mob
+UPDATE npc
+SET level=80,hp=8000,patk=2500,pdef=400,mdef=800,exp=5000
+WHERE id=20092 OR id=20362 OR id=20097 OR id=20100 OR id=20404 OR id=20378 OR id=20102 OR id=20118 OR id=20022 OR id=20117 OR id=20107 OR id=20115 OR id=20114 OR id=20056 OR id=20461 OR id=20110 OR id=20113 OR id=20462 OR id=20112 OR id=20109 OR id=27117
+
+
+Edit
+
+UPDATE droplist
+SET itemId=547
+WHERE mobId=25527 AND itemId=1146
+
+
+
+UPDATE droplist
+SET chance=2000
+WHERE chance=12000 AND itemId=5249 OR chance=20000 AND itemId=5249
+
+
+Setam sansul mic la drop A gr pushte
+
+UPDATE droplist
+SET chance=3000
+WHERE 
+category=70
+
+
+
+
+
+UPDATE npc
+SET level=80,hp=1500000,patk=20000,pdef=6000,mdef=1500,exp=10000000
+WHERE id=25496 OR id=25493 OR id=25032 OR id=25016 OR id=25316 OR id=25481 
+
+
+UPDATE npc
+SET level=80
+WHERE id=25497 OR id=25494 OR id=25495 OR id=25034 OR id=25033 OR id=25017 OR id=25018 OR id=25317 OR id=25318 OR id=25482 OR id=25483 
+
+
+
+
+
+
+
+
+
+<add order="0x40" stat="debuffResist" val="30"/> 
+<def name="cancelRate" val="25"/>  
+
+<add order="0x40" stat="cancelResist" val="80"/>
+      </effect>
