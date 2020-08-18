@@ -1,0 +1,1080 @@
+if ($Row['number'] == $_POST['number']) echo'Такой номер уже существует';	
+
+if(@$_POST['number'] == $Row['number']) exit ('Такой номер уже существует.');
+
+echo "Uraaa";
+echo $Row['text'];
+echo $_SESSION['limbaj'];
+echo "$Row[text] $Row[name]";
+
+	print_r("INSERT INTO `user`  VALUES ('', NOW(), '$_POST[number]', '$_POST[countrysender]', '$_POST[weight]', '$_POST[geter]', '$_POST[type]', '$_POST[countryget]', '$_POST[sender]', '$_POST[adres] ')");
+	exit;
+
+
+echo '<a href="/loads/material/id/'.$Row['id'].'"><img src="/catalog/mini/'.$Row['dimg'].'/'.$Row['id'].'.jpg" class="lm" alt="'.$Row['name'].'" title="'.$Row['name'].'"></a>';
+
+echo '<a href="/news/material/id/'.$Row['id'].'"><div class="ChatBlock"><span>Добавил: '.$Row['added'].' | '.$Row['date'].'</span>'.$Row['name'].'</div></a>';
+
+echo '<p style="font-size:20px">'.$Row['text'].'</p>';
+
+echo '<br><img src="/catalog/img/'.$Row['dimg'].'/'.$Param['id'].'.jpg" alt="'.$Row['name'].'" width="100%" height="100%"><br>';
+
+echo ' Просомтров: '.($Row['read'] + 1).' | Добавил: '.$Row['added'].' | Дата: '.$Row['date'].' '.$EDIT.'<br><br><b><h1>'.$Row['name'].'</h1></b>';
+
+------------------------------------------------------------------
+ca sa arate toate noutatile :
+
+$Query = mysqli_query($Connect, 'SELECT * FROM `user` WHERE `number` = 123 ORDER BY `id` DESC');
+while($Row = mysqli_fetch_assoc($Query) ) {
+	echo ''.$Row['countrysender'].'';
+}
+
+------------------------------------------------------------------
+
+css :  .lm {width: 220px; height: 220px; margin: 0 15px 15px 0}    -  aranjeaza imagiinele in parate: coloane si rinduri - in loc de tablita-  vashe cruta
+
+------------------------------------------------------------------
+
+$num_file   fara apostrofe se scriu cifrele
+
+'$_POST[link]'   cu apostrofe se scriu literele ( adrese )
+
+mysqli_query($CONNECT, "INSERT INTO `load`  VALUES ($MaxId[0], '$_POST[name]', $_POST[cat], 0, 0, '$_SESSION[USER_LOGIN]', '$_POST[text]', NOW(), $Active, $num_img, $num_file, '$_POST[link]')");
+MessageSend(2, 'Файл добавлен', '/loads');
+
+------------------------------------------------------------------
+
+$_POST[name]  -  post asta ce tu ai scris pe sait si se va inscri in baza de date in coloana name.
+
+
+if ($_SESSION['USER_GROUP'] != 2) MessageSend(2, 'Друзья, я отключил возможность добавления файлов для вас, дабы не возникало горы заявок :) Всем добра.', '/loads');
+
+required - indeplinirea obligatorie a spatiului
+
+cind creez in tablita bazei de date id, trebuie sa bifez autoincrement ca automat id-urile sa se genereze. Tipul INT - integer, cifre intregi.
+
+date - datetime alegem tipul
+
+text - alegem tipul in baza de date - text
+
+
+FormChars - controleaza ca sa nu fie scris cod html in loc de loghin parola etc.
+
+if (!$_POST['opassword']) MessageSend(2, 'Не указан старый пароль'); - arata ca daca lipseshte opassword (parola veche) atunci apare eroare.
+
+GenPass - genereaza parola
+
+if ($_POST['name'] != $_SESSION['USER_NAME']) - daca numele afishat nu coincide cu numele sesiei
+
+UserCountry - preface cifrele in denumirea tarii - asta am programat aparte in sait in failul index cu functii
+
+MessageSend(3, 'Данные изменены.'); } -  o sa arate la urma 
+
+pattern="[A-Za-z-0-9]
+
+На указанный E-mail адрес <b>'.$_POST['email'].'</b> отправленно письмо
+
+if (!$_POST['opassword']) MessageSend(2, 'Не указан старый пароль'); - daca nu aratam parola veche da eroare
+
+tmp_name - daca a fost aleasa din calculator imaginea
+
+type - tipul imaginii
+
+$Num ++;  -  adauga un numar daca se repeta imaginea
+
+$Num    -  numarul la papshi
+
+overflow: auto;     - face scroll
+
+if ($_POST['enter'] and $_POST['text'])   -  daca e apasat enter si cimpul Text nu e gol atunci :
+
+mysqli_query($CONNECT, "INSERT INTO `chat`  VALUES ('', '$_POST[text]', '$_SESSION[USER_LOGIN]', NOW())");
+exit(header('location: /chat'));    - '' - prima valoare din baza de data ( este ID si o lasam goala, a doua '$_POST[text]' - este a doilea rind din baza de date tablita chat ,'$_SESSION[USER_LOGIN]' - o sa arate a treilea rind din baza de data tablita chat si ultima o salam goala " ca sa apara mesajul acolo,NOW() arata ora la momentul prezent
+
+
+SELECT *   - steluta inseamna ca selectam totul
+
+echo '<div class="ChatBlock"><span>'.$Row['user'].' | '.$Row['time'].'</span>'.$Row['message'].'    -  arata loghinul ora si mesajul la chat
+
+display: block sau table in css
+
+substr - taie simboluri din text ex: $rest = substr("abcdef", 1, 3); // возвращает "bcd"
+
+
+$Row =  - extrage din tabela hostingului date
+
+$_POST - introduce date
+
+.'/'.  -  este egal cu
+
+
+'.$_POST['login'].'   arata in scrisoarea trimisa pe email - arata loginul
+
+
+
+mysqli_query($CONNECT, "INSERT INTO `users`  VALUES ('', '$_POST[login]', '$_POST[password]', '$_POST[name]', NOW(), '$_POST[email]', $_POST[country], 0, 0, 0)");   acesti 0, 0, 0 de la urma arata ca ultimele trei coloane nu vor lucra in functia data
+
+
+$Param['id'] += 0;     face din text cifra
+
+----------------------------------------------------
+
+<?php
+
+echo ' Noutati';
+
+?>
+
+--------------------------------------------------------------
+--------------------------------------------------------
+
+<?php
+
+$Array[0] = 'Noutatea 0';
+$Array[1] = 'Noutatea 1';
+
+echo $Array[1];
+
+?>
+
+
+o sa arate Noutatea 1
+----------------------------------------------------
+
+
+
+----------------------------------------------------
+<?php
+
+
+$Array = array('mandarin', 'harbuz', 'mar');
+
+
+echo $Array[1];
+
+?>
+
+o sa arate harbuz
+----------------------------------------------------
+
+----------------------------------------------------
+
+<?php
+
+
+$Array = array('fruct1' => 'mandarin', 'fruct2' =>  'harbuz', 'fruct3' => 'mar');
+
+
+echo $Array[fruct2];
+
+?>
+
+o sa arate harbuz
+
+----------------------------------------------------
+
+
+
+
+
+----------------------------------------------------
+
+<?php
+
+
+$Array = array(0 => 'mandarin', 1 =>  'harbuz', 2 => 'mar');
+
+
+echo $Array[0];
+
+?>
+
+o sa arate mandarin
+
+----------------------------------------------------
+
+----------------------------------------------------
+<?php
+
+$Array = array('mandarin', 'harbuz', 'mar');
+
+unset ($Array[1]);
+
+echo $Array[1];
+
+?>
+
+
+dispare cuvintul harbuz care ar trebui sa fie aratat din functia echo,
+unset sterge
+
+----------------------------------------------------
+
+
+----------------------------------------------------
+
+<?php
+
+
+$Array = array('mandarin', 'harbuz', 'mar');
+
+unset ($Array[1]);
+
+echo $Array[1];
+
+var_dump ($Array);
+
+?>
+
+o sa arate array(2) { [0]=> string(8) "mandarin" [2]=> string(3) "mar" } 
+adica nu o sa arate harbuzul di cauza la unset dar arata tot restul din cauza lui var_dump
+----------------------------------------------------
+
+
+----------------------------------------------------
+
+<?php
+
+$i = 5;
+while($i <= 10) {
+	
+	
+echo $i++;	
+	
+	
+}
+?>
+
+o sa arate 5678910
+
+----------------------------------------------------
+
+----------------------------------------------------
+
+
+<?php
+/* ciclu cind de la urma se uita la conditie */
+$i = 5;
+do {
+	
+echo $i++;
+	
+}
+while($i > 4 );  
+
+	
+?>
+
+o sa arate:
+5678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656 si saitu se  gruzeshte capet
+
+
+----------------------------------------------------
+
+----------------------------------------------------
+
+
+
+<?php
+
+
+for ($i = 1; $i <= 10; $i++)
+
+echo $i;	
+?>
+
+o sa arate: 12345678910 
+
+
+
+----------------------------------------------------
+
+----------------------------------------------------
+
+
+
+<?php
+
+$Array = array(1, 2, 3);
+
+foreach ( $Array as $value)  {
+echo value;	
+	
+	
+}
+	
+?>
+
+
+o sa arate: valuevaluevalue 
+
+
+
+----------------------------------------------------
+
+----------------------------------------------------
+
+
+<?php
+
+$Array = array('Valoarea 1' =>1, 'Valoarea 2' =>2, 'Valoarea 3' =>3);
+
+foreach ( $Array as $key => $value)  {
+	
+echo "<br>Indicam: $key; Si: $value";
+	
+}
+	
+?>
+
+o sa arate: 
+
+Indicam: Valoarea 1; Si: 1
+Indicam: Valoarea 2; Si: 2
+Indicam: Valoarea 3; Si: 3
+
+
+----------------------------------------------------
+cicluri de mai sus
+----------------------------------------------------
+
+
+<?php
+
+for ($i = 1; $i <= 10; $i++) {
+if ($i ==5)	break;
+echo $i;
+
+}	
+?>
+
+o sa arate: 1234  ciclul la cifra 5 se intrerupe
+----------------------------------------------------
+cicluri de mai sus
+----------------------------------------------------
+
+<?php
+
+for ($i = 1; $i <= 10; $i++) {
+if ($i ==5)	continue;
+echo $i;
+
+}	
+?>
+
+o sa arate: 1234678910  adica omite cifra 5
+
+----------------------------------------------------
+cicluri de mai sus
+----------------------------------------------------
+
+
+
+----------------------------------------------------
+functii mai jos
+----------------------------------------------------
+
+
+
+<?php
+
+function Test1() {
+	
+echo 'Salut';	
+	
+	
+}
+
+Test1()
+	
+?>
+
+o sa arate: Salut 
+
+----------------------------------------------------
+functii mai jos
+----------------------------------------------------
+
+
+<?php
+
+function Test1($p1) {
+	
+echo "Salut $p1";	
+		
+}
+
+Test1('Aee detca');
+	
+?>
+
+o sa arate: Salut Aee detca 
+aici folosim virgulele de sus duble " " iar in cazul precedet - simple ' '
+
+
+----------------------------------------------------
+functii mai jos
+----------------------------------------------------
+
+
+<?php
+
+function Test1($p1 = '6') {
+	
+echo "Salut $p1";	
+		
+}
+
+Test1('Aee detca');
+	
+?>
+
+o sa arate: Salut Aee detca  - valoarea 6 nu o arata deoarece am indicat valoarea din paranteza ('Aee detca')
+
+daca in paranteza nu indic nimic acunci : 
+
+
+
+<?php
+
+function Test1($p1 = '6') {
+	
+echo "Salut $p1";	
+		
+}
+
+Test1();
+	
+?>
+
+o sa arate: Salut 6 
+
+
+sau daca indicam o cifra in loc de text ! fara paranteze se indica cifra
+
+
+<?php
+
+function Test1($p1 = '6') {
+	
+echo "Salut $p1";	
+		
+}
+
+Test1(21);
+	
+?>
+
+o sa arate: Salut 21 
+
+
+
+----------------------------------------------------
+functii mai jos
+----------------------------------------------------
+
+<?php
+
+function Test1() {
+return false;
+}
+
+if ( Test1() ) echo '123';
+	
+?>
+
+nu va arata nimic
+
+
+----------------------------------------------------
+functii mai jos
+----------------------------------------------------
+
+
+
+<?php
+
+function Test1() {
+return true;
+}
+
+if ( Test1() ) echo '123';
+	
+?>
+
+
+o sa arate: 123
+
+----------------------------------------------------
+functii mai jos
+----------------------------------------------------
+
+
+<?php
+
+function Test1() {
+return false;
+}
+
+if ( !Test1() ) echo '123';
+	
+?>
+
+o sa arate: 123 fiinca am scris return false; si in if am scris: !Test1
+
+----------------------------------------------------
+functii mai jos
+----------------------------------------------------
+
+
+<?php
+$a = 100;
+
+function Test1() {
+if($a == 100) return true;
+else return false;	
+}
+
+if ( Test1() ) echo '123';
+	
+?>
+
+nu o sa arate nimic fiinca pe a nu o vede functia si rezultatul este false
+
+----------------------------------------------------
+functii mai jos
+----------------------------------------------------
+
+<?php
+$a = 100;
+
+function Test1() {
+global $a, $v, $h;
+if($a == 100) return true;
+else return false;	
+}
+
+if ( Test1() ) echo '123';
+	
+?>
+
+o sa arate: 123 fiinca am scris global - vede a pe toata pagina. Global parametrii se indica prin virgula daca sunt mai multi: global $a, $v, $h;
+
+----------------------------------------------------
+functii mai jos: functie in functie:
+----------------------------------------------------
+
+<?php
+
+function Test1() {
+	
+function Test2() {
+	
+echo 'La revedere';
+	
+}
+Test2();
+
+
+echo 'Salut';
+}
+
+Test1();
+
+?>
+
+o sa arate: La revedereSalut 
+
+
+
+----------------------------------------------------
+functii mai jos: functie in functie:
+----------------------------------------------------
+
+
+
+<?php
+
+function Test1() {
+	
+function Test2() {
+	
+echo 'La revedere';
+	
+}
+Test2();
+
+
+echo '<br>Salut';
+}
+
+Test1();
+
+?>
+
+o sa arate: 
+
+La revedere
+Salut 
+
+fiinca am scris <br> in echo
+
+
+----------------------------------------------------
+functii mai jos: functie in functie:
+----------------------------------------------------
+
+
+<?php
+function Test1() {
+	
+function Test2() {
+echo '<br>La revedere';	
+}
+
+
+echo 'Salut';
+
+}
+
+Test1();
+Test2();
+
+?>
+
+o sa arate: 
+
+Salut
+La revedere 
+
+aici eu am chemat functia test2() mai tirziu si o arata
+
+----------------------------------------------------
+functii mai jos: functie in functie:
+----------------------------------------------------
+
+<?php
+
+function Test1() {
+	
+function Test2() {
+	
+echo '<br>La revedere';
+	
+}
+
+echo 'Salut';
+}
+
+
+Test2();
+?>
+
+nu o sa arate nimic deoarece nu am chemat functia Test1()
+
+
+----------------------------------------------------
+functii mai jos:
+----------------------------------------------------
+
+
+
+<?php
+
+
+function Test1() {
+	
+echo lucreaza dsds;
+	
+}
+ 
+Test1();
+?>
+
+
+nu va arata nimic ca avem spatiu intre cuvintele din echo
+
+
+
+
+----------------------------------------------------
+functii mai jos:
+----------------------------------------------------
+
+
+<?php
+
+
+function Test1() {
+	
+echo lucreaza;
+	
+}
+ 
+Test1();
+?>
+
+va arata: lucreaza
+
+
+----------------------------------------------------
+functii mai jos:
+----------------------------------------------------
+
+<?php
+
+
+function Test1() {
+	
+echo 'lucreaza cu spatiu daca folosim apostrofe';
+	
+}
+ 
+Test1();
+?>
+
+va arata: lucreaza cu spatiu daca folosim apostrofe
+
+----------------------------------------------------
+sesii mai jos:
+----------------------------------------------------
+
+<?php
+session_start();
+
+$_SESSION['limbaj'] = 'php';
+$_SESSION['eu'] = 'om';
+
+echo $_SESSION['limbaj'];
+
+?>
+
+daca scrim codul ista pe alta pagina:
+
+<?php
+session_start();
+
+echo $_SESSION['limbaj'];
+?>
+
+o sa arate: php ca pe pagina unde am scris
+
+----------------------------------------------------
+sesii mai jos:
+----------------------------------------------------
+
+ca sa stergem vre-o sesie scrim codul unset
+
+<?php
+session_start();
+
+$_SESSION['limbaj'] = 'php';
+$_SESSION['eu'] = 'om';
+
+unset($_SESSION['limbaj']);
+
+echo $_SESSION['limbaj'];
+
+?>
+
+si cuvintul php nu o sa mai arate. Sesia nu va mai lucra nici de pe o pagina unde este scris: echo $_SESSION['limbaj'];
+
+----------------------------------------------------
+Prelucrarea datelor mai jos:
+----------------------------------------------------
+
+
+<form method="POST" action="/">
+<input type="text" name="word" required>
+<br><br><textarea name="message" placeholder="Textul mesajului" required></textarea>
+<br><input type="submit" name="enter" value="Trimite"><input type="reset" value="sterge">
+</form>
+
+
+codul de mai jos scrim pe pagina indicate in parametrul action din codul de mai sus:  action="/" in cazul dat pereadresatia tot pe pagina aceasta.
+
+
+<?php
+if ($_POST['enter']) {
+	
+echo "
+
+Numele: $_POST[word]
+<br>Textul: $_POST[message]
+";
+
+}
+?>
+
+
+
+si va aparea 2 forme in care scrim textul si 2 butoane iar dupa ce scrim textul si apasam butonul Trimite: va aparea mai jos ceea ce am scris.
+
+
+----------------------------------------------------
+Prelucrarea datelor mai jos:
+----------------------------------------------------
+
+exemplu cu codul de mai sus pe 2 pagini:
+pe pagina index scriu: 
+
+
+
+<form method="POST" action="/profile">
+<input type="text" name="word" required>
+<br><br><textarea name="message" placeholder="Textul mesajului" required></textarea>
+<br><input type="submit" name="enter" value="Trimite"><input type="reset" value="sterge">
+</form>
+
+
+deoarece in pagina index.php in care scriu toate sesiile am scris acest cod: else if ($Page == 'profile') include('page/profile.php');  de aceea adresa este asta in codul de mai sus <form method="POST" action="/profile">
+adica adresa o scriu /profile
+
+pe pagina profile scriu: 
+
+<?php
+if ($_POST['enter']) {
+	
+echo "
+
+Numele: $_POST[word]
+<br>Textul: $_POST[message]
+";
+
+}
+?>
+
+----------------------------------------------------
+constanta
+----------------------------------------------------
+
+constanta var_dump : 
+
+<?php
+var_dump($Connect);
+
+?>
+
+----------------------------------------------------
+Conectarea:
+----------------------------------------------------
+pe index.php scrim:
+
+<?php
+include_once('setting.php');
+$Connect = mysqli_connect(HOST, USER, PASS, DB);
+
+if (!$Connect) exit('Eroarea conectarii');
+
+var_dump($Connect);
+
+?>
+
+
+pe setting.php scrim:
+
+<?php
+define ('HOST', 'localhost');
+define ('USER', 'doinita_2');
+define ('PASS', 'leroiv461');
+define ('DB', 'doinita_1');
+?>
+
+
+----------------------------------------------------
+Conectarea: 2 faile index si setting
+----------------------------------------------------
+
+pe index.php scrim:
+<?php
+include_once('setting.php');
+$Connect = mysqli_connect(HOST, USER, PASS, DB);
+
+if (!$Connect) exit('Eroarea conectarii');
+
+$Row = mysqli_fetch_assoc( mysqli_query($Connect, 'SELECT * FROM `news` WHERE `id` = 1') );
+
+echo $Row['text'];
+
+?>
+
+
+pe setting.php scrim:
+
+<?php
+define ('HOST', 'localhost');
+define ('USER', 'doinita_2');
+define ('PASS', 'leroiv461');
+define ('DB', 'doinita_1');
+?>
+
+----------------------------------------------------
+Conectarea: 2 faile index si setting : afisham 2 coloane din tablita:
+----------------------------------------------------
+
+<?php
+include_once('setting.php');
+$Connect = mysqli_connect(HOST, USER, PASS, DB);
+
+if (!$Connect) exit('Eroarea conectarii');
+
+$Query = mysqli_query($Connect, 'SELECT `name`,`text` FROM `news`');
+
+while($Row = mysqli_fetch_assoc($Query) ) {
+	
+echo "$Row[text] $Row[name]";
+}
+?>
+
+----------------------------------------------------
+Conectarea: 2 faile index si setting : afisham 2 coloane si doar 3 noutati din tablita din tablita:
+----------------------------------------------------
+
+
+<?php
+include_once('setting.php');
+$Connect = mysqli_connect(HOST, USER, PASS, DB);
+
+if (!$Connect) exit('Eroarea conectarii');
+
+$Query = mysqli_query($Connect, 'SELECT `name`,`text` FROM `news` Limit 3');
+
+while($Row = mysqli_fetch_assoc($Query) ) {
+	
+echo "$Row[text] $Row[name]";
+}
+?>
+
+----------------------------------------------------
+Conectarea: 2 faile index si setting : afisham 2 coloane si aranjam noutatile in ordine descrescatoare dupa id:
+Select zapros:
+----------------------------------------------------
+
+
+<?php
+include_once('setting.php');
+$Connect = mysqli_connect(HOST, USER, PASS, DB);
+
+if (!$Connect) exit('Eroarea conectarii');
+
+$Query = mysqli_query($Connect, 'SELECT `name`,`text` FROM `news` ORDER BY `id` DESC');
+
+while($Row = mysqli_fetch_assoc($Query) ) {
+	
+echo "$Row[text] $Row[name]";
+}
+?>
+
+----------------------------------------------------
+Update zapros 1:
+----------------------------------------------------
+
+<?php
+include_once('setting.php');
+$Connect = mysqli_connect(HOST, USER, PASS, DB);
+
+if (!$Connect) exit('Eroarea conectarii');
+
+mysqli_query($Connect, "UPDATE `news` SET `text` = 'Inerc sa scriu un dvijoc epta' WHERE `id` = 2");
+
+
+?>
+
+dupa ce scriu codul abnavlesc pagina index,php si ma uit in baza de date si o sa vad ca in coloana text rindul care corespunde cu id 3 s-a schimbat textul in : Inerc sa scriu un dvijoc epta
+
+----------------------------------------------------
+Update zapros 2:
+----------------------------------------------------
+
+
+<?php
+include_once('setting.php');
+$Connect = mysqli_connect(HOST, USER, PASS, DB);
+
+if (!$Connect) exit('Eroarea conectarii');
+
+mysqli_query($Connect, "UPDATE `news` SET `text` = 'Inerc sa scriu un dvijoc epta'");
+
+
+?>
+
+am sters din codul precedent: WHERE `id` = 2 si am abnavlit pagina index.php si in baza de date s-a schimbat textul la toate noutatile.
+
+----------------------------------------------------
+Insert zapros:
+----------------------------------------------------
+
+<?php
+include_once('setting.php');
+$Connect = mysqli_connect(HOST, USER, PASS, DB);
+
+if (!$Connect) exit('Eroarea conectarii');
+
+mysqli_query($Connect, "INSERT INTO `news` VALUES ('', 'Denumirea', '2', '0', 'admin', 'Insashi textul noutatii', NOW(), '1')");
+
+
+?>
+si in baza de date se va adauga noutatile dupa ce facem refrash la index.php
+
+----------------------------------------------------
+Delete zapros:
+----------------------------------------------------
+
+<?php
+include_once('setting.php');
+$Connect = mysqli_connect(HOST, USER, PASS, DB);
+
+if (!$Connect) exit('Eroarea conectarii');
+
+$Query = mysqli_query($Connect, 'DELETE FROM `news` WHERE `id` = 4');
+
+?>
+
+dupa ce am facut refrash la pagina index.php, din baza de date a disparut noutatea cu id 4. Daca vom sterge WHERE `id` = 4 atunci toata baza de date din tablita news se va sterge.
+
+----------------------------------------------------
+Numara cite noutati sunt in baza de date:
+----------------------------------------------------
+
+
+<?php
+include_once('setting.php');
+$Connect = mysqli_connect(HOST, USER, PASS, DB);
+
+if (!$Connect) exit('Eroarea conectarii');
+
+$Query = mysqli_query($Connect, 'SELECT `text` FROM `news`');
+$Num = mysqli_num_rows($Query);
+echo $Num;
+?>
+
+se poate de facut numaratura dupa numele de acaunt sau email prin WHERE `id` = 4 de schimbat aici cumva
+----------------------------------------------------
+
+----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
